@@ -17,12 +17,7 @@ export const Layout: FC<IProps> = ({ children }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <Box
-          bg='black'
-          minH='100vh'
-          bgGradient='linear(to-br, gray.800, gray.700)'
-          color='gray.200'
-        >
+        <Box minH='100vh' bg='gray.900' color='gray.200'>
           <Navbar />
           {children}
         </Box>
