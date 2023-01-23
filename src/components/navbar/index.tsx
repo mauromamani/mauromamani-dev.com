@@ -1,0 +1,86 @@
+import { FC } from 'react';
+import NextLink from 'next/link';
+import { Box, HStack, chakra } from '@chakra-ui/react';
+// import Image from 'next/image';
+import { Image } from '@chakra-ui/react';
+
+interface INavLink {
+  url: string;
+  title: string;
+}
+
+const LINKS: INavLink[] = [
+  {
+    url: '/projects',
+    title: 'Projects',
+  },
+  {
+    url: '/about',
+    title: 'About',
+  },
+];
+
+const Link = chakra('a', {
+  baseStyle: {
+    py: 2,
+    px: 4,
+    rounded: 'sm',
+    _hover: {
+      textDecoration: 'none',
+      bgColor: 'gray.900',
+      transitionDuration: '300ms',
+    },
+    cursor: 'pointer',
+    transitionDuration: '300ms',
+  },
+});
+
+interface IProps {}
+
+export const Navbar: FC<IProps> = () => {
+  const socialLinks = () => {
+    return (
+      <HStack>
+        <Link href='https://github.com/mauromamani'>Github</Link>
+        <Link href='https://www.linkedin.com/in/mauromamani/'>LinkedIn</Link>
+      </HStack>
+    );
+  };
+
+  const menuLinks = () => {
+    return (
+      <HStack flexWrap='wrap' justifyContent='center' alignItems='center'>
+        {LINKS.map((link: INavLink) => (
+          <Link as={NextLink} href={link.url} key={link.url}>
+            {link.title}
+          </Link>
+        ))}
+        {socialLinks()}
+      </HStack>
+    );
+  };
+
+  return (
+    <Box
+      py='2'
+      px='4'
+      as='header'
+      zIndex={1}
+      borderTopWidth={5}
+      borderColor='orange.300'
+      bgColor='gray.800'
+      fontWeight='medium'
+      letterSpacing='wide'
+    >
+      <HStack
+        justifyContent='space-between'
+        flexDir={['column', 'column', 'row']}
+      >
+        <Link _hover={{}} href='/'>
+          <Image src='/cat.svg' boxSize='40px' alt='logo' />
+        </Link>
+        {menuLinks()}
+      </HStack>
+    </Box>
+  );
+};
