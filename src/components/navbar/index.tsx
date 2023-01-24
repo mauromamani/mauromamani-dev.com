@@ -69,8 +69,7 @@ export const Navbar: FC<IProps> = () => {
       borderTopWidth={5}
       borderColor='orange.300'
       bgColor='gray.800'
-      fontWeight='medium'
-      letterSpacing='wide'
+      fontWeight='normal'
     >
       <HStack
         justifyContent='space-between'

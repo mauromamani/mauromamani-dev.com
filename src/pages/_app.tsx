@@ -2,11 +2,16 @@ import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
+import '@fontsource/inter';
 
 export const customTheme = extendTheme({
   config: {
     initialColorMode: 'dark',
     useSystemColorMode: false,
+  },
+  fonts: {
+    heading: 'Inter, sans-serif',
+    body: 'Inter, sans-serif',
   },
 });
 
