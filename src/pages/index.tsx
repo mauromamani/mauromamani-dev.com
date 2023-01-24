@@ -3,12 +3,7 @@ import { Box, VStack, Image, Heading } from '@chakra-ui/react';
 const HomePage = () => {
   return (
     <VStack spacing='32'>
-      <Box
-        as='section'
-        w='100%'
-        px='8'
-        bgGradient={['linear(to-br, gray.800, #181924)']}
-      >
+      <Box as='section' w='100%' px='8'>
         <Box maxW='2xl' mx='auto'>
           {/* Jumbotron */}
           <VStack alignItems='center' justifyContent='center' pt='24' pb='12'>
@@ -38,15 +33,15 @@ const HomePage = () => {
                 color='gray.500'
                 fontWeight='medium'
               >
-                Apasionado en{' '}
+                Apasionado en el{' '}
                 <Box as='span' color='gray.300'>
                   Diseño
                 </Box>{' '}
                 y{' '}
                 <Box as='span' color='gray.300'>
-                  Desarrollo de aplicaciones
+                  Desarrollo{' '}
                 </Box>
-                .
+                de aplicaciones.
               </Heading>
             </Box>
           </VStack>
