@@ -61,7 +61,7 @@ export const Hero = () => {
           </Button>
           <Button
             variant='solid'
-            colorScheme='gray'
+            colorScheme='twitter'
             rounded='md'
             leftIcon={<CgMail size='20px' />}
           >
