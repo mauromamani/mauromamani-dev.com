@@ -76,7 +76,7 @@ export const Navbar: FC<IProps> = () => {
         flexDir={['column', 'column', 'row']}
       >
         <Link _hover={{}} href='/'>
-          <Image src='/cat.svg' boxSize='40px' alt='logo' />
+          <Image src='/cat.svg' boxSize='40px' alt='logo' className='shine' />
         </Link>
         {menuLinks()}
       </HStack>
