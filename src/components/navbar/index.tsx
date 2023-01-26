@@ -12,11 +12,11 @@ interface INavLink {
 const LINKS: INavLink[] = [
   {
     url: '/projects',
-    title: 'Projects',
+    title: 'Proyectos',
   },
   {
     url: '/about',
-    title: 'About',
+    title: 'Sobre mí',
   },
 ];
 
