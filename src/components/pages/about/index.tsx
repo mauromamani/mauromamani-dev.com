@@ -13,7 +13,7 @@ const Link = chakra('a', {
   baseStyle: {
     py: 2,
     px: 4,
-    rounded: 'sm',
+    rounded: 'md',
     _hover: {
       textDecoration: 'none',
       bgColor: 'gray.900',
