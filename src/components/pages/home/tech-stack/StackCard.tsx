@@ -1,29 +1,11 @@
+import { MotionBox } from '@/components/framer-motion/MotionBox';
 import { ITech } from '@/types';
-import {
-  Box,
-  Flex,
-  forwardRef,
-  IconButton,
-  LinkBox,
-  LinkOverlay,
-  Text,
-} from '@chakra-ui/react';
-import { isValidMotionProp, motion } from 'framer-motion';
+import { Flex, IconButton, LinkBox, LinkOverlay, Text } from '@chakra-ui/react';
 import { FC } from 'react';
 
 interface IProps {
   tech: ITech;
 }
-
-export const MotionBox = motion(
-  forwardRef((props, ref) => {
-    const chakraProps = Object.fromEntries(
-      // do not pass framer props to DOM element
-      Object.entries(props).filter(([key]) => !isValidMotionProp(key))
-    );
-    return <Box ref={ref} {...chakraProps} />;
-  })
-);
 
 export const StackCard: FC<IProps> = ({ tech }) => {
   return (

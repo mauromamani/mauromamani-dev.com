@@ -24,7 +24,7 @@ const Link = chakra('a', {
   baseStyle: {
     py: 2,
     px: 4,
-    rounded: 'sm',
+    rounded: 'md',
     _hover: {
       textDecoration: 'none',
       bgColor: 'gray.900',
@@ -76,7 +76,7 @@ export const Navbar: FC<IProps> = () => {
         flexDir={['column', 'column', 'row']}
       >
         <Link _hover={{}} href='/'>
-          <Image src='/cat.svg' boxSize='40px' alt='logo' />
+          <Image src='/cat.svg' boxSize='40px' alt='logo' className='shine' />
         </Link>
         {menuLinks()}
       </HStack>

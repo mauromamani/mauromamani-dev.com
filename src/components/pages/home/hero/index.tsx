@@ -23,7 +23,7 @@ export const Hero = () => {
             bgClip='text'
             bgGradient='linear(to-l, #C05621, #ED8936)'
             size='2xl'
-            className='jumbotron'
+            className='shine'
           >
             Mauro B. Mamani
           </Heading>
