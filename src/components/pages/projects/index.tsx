@@ -50,7 +50,7 @@ export const Page = () => {
                   <Heading size='md' color='blue.500'>
                     Living room Sofa
                   </Heading>
-                  <Text>
+                  <Text textColor='gray.400'>
                     This sofa is perfect for modern tropical spaces, baroque
                     inspired spaces, earthy toned spaces and for people who love
                     a chic design with a sprinkle of vintage design.
