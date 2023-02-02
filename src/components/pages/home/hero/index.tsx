@@ -1,16 +1,18 @@
-import { Box, VStack, Image, Heading, HStack, Button } from '@chakra-ui/react';
+import {
+  Box,
+  VStack,
+  Image,
+  Heading,
+  HStack,
+  Button,
+  Stack,
+} from '@chakra-ui/react';
 import { CgAlbum, CgMail } from 'react-icons/cg';
 
 export const Hero = () => {
   return (
     <Box maxW='2xl' mx='auto'>
-      <VStack
-        alignItems='center'
-        justifyContent='center'
-        pt='24'
-        pb='12'
-        spacing='5'
-      >
+      <VStack pt='24' pb='12' spacing='5' textAlign='center'>
         <Box rounded='full' p='1' bgColor='blue.500'>
           <Image src='/cat.svg' boxSize='120px' alt='logo' />
         </Box>
@@ -50,7 +52,7 @@ export const Hero = () => {
         </Box>
 
         {/* Buttons */}
-        <HStack>
+        <Stack direction={['column', 'row']}>
           <Button
             variant='solid'
             colorScheme='orange'
@@ -67,7 +69,7 @@ export const Hero = () => {
           >
             Contáctame
           </Button>
-        </HStack>
+        </Stack>
       </VStack>
     </Box>
   );
