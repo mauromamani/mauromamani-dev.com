@@ -55,7 +55,7 @@ export const Navbar: FC<IProps> = () => {
     return (
       <HStack flexWrap='wrap' justifyContent='center' alignItems='center'>
         {LINKS.map((link: INavLink) => (
-          <Link as={NextLink} href={link.url} key={link.url} target='_blank'>
+          <Link as={NextLink} href={link.url} key={link.url}>
             {link.title}
           </Link>
         ))}
@@ -79,7 +79,7 @@ export const Navbar: FC<IProps> = () => {
         justifyContent='space-between'
         flexDir={['column', 'column', 'row']}
       >
-        <Link _hover={{}} href='/' target='_blank'>
+        <Link _hover={{}} href='/'>
           <Image src='/cat.svg' boxSize='40px' alt='logo' className='shine' />
         </Link>
         {menuLinks()}
