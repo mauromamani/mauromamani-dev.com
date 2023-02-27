@@ -41,8 +41,12 @@ export const Navbar: FC<IProps> = () => {
   const socialLinks = () => {
     return (
       <HStack>
-        <Link href='https://github.com/mauromamani'>Github</Link>
-        <Link href='https://www.linkedin.com/in/mauromamani/'>LinkedIn</Link>
+        <Link href='https://github.com/mauromamani' target='_blank'>
+          Github
+        </Link>
+        <Link href='https://www.linkedin.com/in/mauromamani/' target='_blank'>
+          LinkedIn
+        </Link>
       </HStack>
     );
   };
@@ -51,7 +55,7 @@ export const Navbar: FC<IProps> = () => {
     return (
       <HStack flexWrap='wrap' justifyContent='center' alignItems='center'>
         {LINKS.map((link: INavLink) => (
-          <Link as={NextLink} href={link.url} key={link.url}>
+          <Link as={NextLink} href={link.url} key={link.url} target='_blank'>
             {link.title}
           </Link>
         ))}
@@ -75,7 +79,7 @@ export const Navbar: FC<IProps> = () => {
         justifyContent='space-between'
         flexDir={['column', 'column', 'row']}
       >
-        <Link _hover={{}} href='/'>
+        <Link _hover={{}} href='/' target='_blank'>
           <Image src='/cat.svg' boxSize='40px' alt='logo' className='shine' />
         </Link>
         {menuLinks()}
