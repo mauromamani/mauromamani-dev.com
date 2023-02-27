@@ -80,6 +80,7 @@ export const Page = () => {
           borderColor='gray.600'
           _hover={{}}
           href='https://github.com/mauromamani'
+          target='_blank'
         >
           <HStack spacing='2' alignItems='center'>
             <Box as={IoLogoGithub} />
@@ -93,6 +94,7 @@ export const Page = () => {
           borderColor='blue.400'
           _hover={{}}
           href='https://www.linkedin.com/in/mauromamani/'
+          target='_blank'
         >
           <HStack spacing='2' alignItems='center'>
             <Box as={IoLogoLinkedin} />
