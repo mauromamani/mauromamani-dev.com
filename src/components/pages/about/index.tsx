@@ -50,10 +50,15 @@ export const Page = () => {
           Soy un desarrollador full stack JavaScript . Mi experiencia incluye el
           uso de herramientas como{' '}
           <Box as='span' fontWeight='bold'>
-            React, Angular, Vue.js y Express
+            React, Angular, Vue.js, Express, NestJS
           </Box>{' '}
           para crear aplicaciones con una interfaz de usuario dinámica y una
-          arquitectura de back-end sólida.
+          arquitectura de back-end sólida. También me especializo en tecnologias
+          como{' '}
+          <Box as='span' fontWeight='bold'>
+            .NET
+          </Box>{' '}
+          para el desarrollo de aplicaciones de escritorio.
         </Text>
         <Text>
           Soy una persona dedicada, con una mentalidad de aprendizaje continuo y

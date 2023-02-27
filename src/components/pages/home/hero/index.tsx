@@ -6,8 +6,9 @@ import {
   HStack,
   Button,
   Stack,
+  Link,
 } from '@chakra-ui/react';
-import { CgAlbum, CgMail } from 'react-icons/cg';
+import { CgAlbum } from 'react-icons/cg';
 
 export const Hero = () => {
   return (
@@ -53,22 +54,19 @@ export const Hero = () => {
 
         {/* Buttons */}
         <Stack direction={['column', 'row']}>
-          <Button
-            variant='solid'
-            colorScheme='orange'
-            rounded='md'
-            leftIcon={<CgAlbum size='20px' />}
+          <Link
+            href='https://drive.google.com/file/d/1MNT3q6P26F6Gw3IKa-O8vU4hKfStnh1y/view?usp=share_link'
+            target='_blank'
           >
-            Currículum
-          </Button>
-          <Button
-            variant='solid'
-            colorScheme='twitter'
-            rounded='md'
-            leftIcon={<CgMail size='20px' />}
-          >
-            Contáctame
-          </Button>
+            <Button
+              variant='solid'
+              colorScheme='orange'
+              rounded='md'
+              leftIcon={<CgAlbum size='20px' />}
+            >
+              Currículum
+            </Button>
+          </Link>
         </Stack>
       </VStack>
     </Box>

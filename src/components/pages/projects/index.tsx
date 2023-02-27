@@ -14,7 +14,75 @@ import {
   HStack,
   Badge,
   Divider,
+  chakra,
 } from '@chakra-ui/react';
+
+const Link = chakra('a', {
+  baseStyle: {
+    border: 'none',
+    cursor: 'pointer',
+  },
+});
+
+interface IMainProject {
+  title: string;
+  description: string;
+  image: string;
+  badges: string[];
+  github: string;
+}
+
+interface ISecondaryProject {
+  title: string;
+  description: string;
+  github: string;
+}
+
+const mainProjects: IMainProject[] = [
+  {
+    title: 'Gestión de Óptica',
+    description:
+      'Incluye las siguientes funcionalidades: Inicio de sesión, Administración de usuarios, Administración de clientes, Administración de inventario, Procesamiento de ventas, Gestión de proveedores, Generación de informes',
+    image: '/optica.webp',
+    badges: ['.NET', 'C#', 'Windows Forms'],
+    github: 'https://github.com/mauromamani/gestion-optica',
+  },
+  {
+    title: 'Gestión de Mueblería',
+    description:
+      'Incluye las siguientes funcionalidades: Inicio de sesión, Administración de usuarios, Administración de clientes, Administración de inventario, Procesamiento de ventas, Gestión de proveedores',
+    image: '/muebleria.webp',
+    badges: ['.NET', 'C#', 'WPF'],
+    github: 'https://github.com/mauromamani/gestion-muebleria',
+  },
+];
+
+const secondaryProjects: ISecondaryProject[] = [
+  {
+    title: 'Markdown Editor',
+    description:
+      'Aplicación de escritorio que permite transformar markdown a un texto formateado, ideal para escribir un archivo README de manera eficaz',
+    github: 'https://github.com/mauromamani/markdown-editor',
+  },
+  {
+    title: 'Next Blog',
+    description:
+      'Blog personal con el cual se pueden subir artículos en formato Markdown, desplegado en Vercel',
+    github: 'https://github.com/mauromamani/next-blog',
+  },
+  {
+    title: 'Portafolio Personal',
+    description:
+      'Mi portafolio en donde exhibo mis proyectos, mis tecnologias y herramientas favoritas, y un poco sobre mí',
+    github: 'https://github.com/mauromamani/mauromamani-dev.com',
+  },
+  {
+    title: 'Gestión de empleados',
+    description:
+      'Aplicación para el control, carga de datos y seguimiento de empleados de una cooperativa',
+    github: 'https://github.com/mauromamani/gestion-de-empleados',
+  },
+];
 
 // Projects Page
 export const Page = () => {
@@ -37,35 +105,29 @@ export const Page = () => {
           gap={[2, 5, 5, 5]}
           mt='5'
         >
-          {[1, 2].map((a) => (
-            <MotionBox whileHover={{ y: -5 }} key={a}>
+          {mainProjects.map((mProject) => (
+            <MotionBox whileHover={{ y: -5 }} key={mProject.title}>
               <Card maxW='lg' boxShadow='xl'>
                 <Image
-                  src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                  src={mProject.image}
                   alt='Green double couch with wooden legs'
                   border='lg'
                   roundedTop='sm'
                 />
                 <CardBody bgColor='gray.900' rounded='sm'>
                   <Stack mt='6' spacing='3'>
-                    <Heading size='md' color='blue.500'>
-                      Living room Sofa
-                    </Heading>
-                    <Text textColor='gray.400'>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
+                    <Link href={mProject.github} target='_blank'>
+                      <Heading size='md' color='blue.500'>
+                        {mProject.title}
+                      </Heading>
+                    </Link>
+                    <Text textColor='gray.400'>{mProject.description}</Text>
                     <HStack>
-                      <Badge rounded='md' px='1.5'>
-                        Default
-                      </Badge>
-                      <Badge rounded='md' px='1.5'>
-                        Default
-                      </Badge>
-                      <Badge rounded='md' px='1.5'>
-                        Default
-                      </Badge>
+                      {mProject.badges.map((badge) => (
+                        <Badge rounded='md' px='1.5' key={badge}>
+                          {badge}
+                        </Badge>
+                      ))}
                     </HStack>
                   </Stack>
                 </CardBody>
@@ -82,8 +144,8 @@ export const Page = () => {
         gap={[2, 5, 5, 5]}
         my='5'
       >
-        {[1, 2, 3, 4, 5, 6].map((a) => (
-          <MotionBox whileHover={{ y: -5 }} key={a}>
+        {secondaryProjects.map((sProject) => (
+          <MotionBox whileHover={{ y: -5 }} key={sProject.title}>
             <LinkBox
               as='article'
               w='100%'
@@ -100,14 +162,13 @@ export const Page = () => {
                 borderColor: 'blue.500',
               }}
             >
-              <LinkOverlay href={'/about'} rel='noopener' isExternal>
+              <LinkOverlay href={sProject.github} rel='noopener' isExternal>
                 <Flex flexDirection='column' color='blue.500'>
                   <Heading as='h1' fontSize='xl' letterSpacing='wide'>
-                    Proyectos
+                    {sProject.title}
                   </Heading>
                   <Text as='p' mt='3' color='gray.400'>
-                    Lista de proyectos personales código abierto disponibles en
-                    Github
+                    {sProject.description}
                   </Text>
                 </Flex>
               </LinkOverlay>
@@ -115,6 +176,20 @@ export const Page = () => {
           </MotionBox>
         ))}
       </Grid>
+
+      <Heading size='md' color='blue.500' mt='5' mb='8'>
+        Más proyectos disponibles en{' '}
+        <Link
+          href='https://github.com/mauromamani?tab=repositories'
+          _hover={{
+            borderBottom: '1px',
+            borderColor: 'gray.300',
+          }}
+          target='_blank'
+        >
+          Github
+        </Link>
+      </Heading>
     </Box>
   );
 };
