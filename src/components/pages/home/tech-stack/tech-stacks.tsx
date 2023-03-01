@@ -1,13 +1,9 @@
 import {
-  SiTypescript,
-  SiJavascript,
   SiTailwindcss,
-  SiChakraui,
   SiMaterialui,
   SiDocker,
   SiLinux,
   SiPostgresql,
-  SiMysql,
   SiMongodb,
   SiNestjs,
   SiExpress,
@@ -33,24 +29,14 @@ export const frontTechStack: ITech[] = [
     url: 'https://nextjs.org/',
   },
   {
-    name: 'Typescript',
-    icon: <SiTypescript fontSize='20px' />,
-    url: 'https://www.typescriptlang.org/',
-  },
-  {
-    name: 'Javascript',
-    icon: <SiJavascript fontSize='20px' />,
-    url: 'https://www.javascript.com/',
+    name: 'Angular',
+    icon: <SiAngular fontSize='20px' />,
+    url: 'https://angular.io/',
   },
   {
     name: 'TailwindCSS',
     icon: <SiTailwindcss fontSize='20px' />,
     url: 'https://tailwindcss.com/',
-  },
-  {
-    name: 'Chakra UI',
-    icon: <SiChakraui fontSize='20px' />,
-    url: 'https://chakra-ui.com/',
   },
 ];
 
@@ -66,6 +52,11 @@ export const backTechStack: ITech[] = [
     url: 'https://expressjs.com/es/',
   },
   {
+    name: '.NET',
+    icon: <SiDotnet fontSize='20px' />,
+    url: 'https://dotnet.microsoft.com/es-es/',
+  },
+  {
     name: 'MongoDB',
     icon: <SiMongodb fontSize='20px' />,
     url: 'https://www.mongodb.com/es',
@@ -74,11 +65,6 @@ export const backTechStack: ITech[] = [
     name: 'PostgreSQL',
     icon: <SiPostgresql fontSize='20px' />,
     url: 'https://www.postgresql.org/',
-  },
-  {
-    name: 'MySQL',
-    icon: <SiMysql fontSize='20px' />,
-    url: 'https://www.mysql.com/',
   },
 ];
 
@@ -101,11 +87,6 @@ export const toolsTechStack: ITech[] = [
 ];
 
 export const othersTechStack: ITech[] = [
-  {
-    name: 'Angular',
-    icon: <SiAngular fontSize='20px' />,
-    url: 'https://angular.io/',
-  },
   {
     name: 'Vuejs',
     icon: <FaVuejs fontSize='20px' />,
@@ -130,10 +111,5 @@ export const othersTechStack: ITech[] = [
     name: 'Java',
     icon: <SiJava fontSize='20px' />,
     url: 'https://www.java.com/es/',
-  },
-  {
-    name: '.Net',
-    icon: <SiDotnet fontSize='20px' />,
-    url: 'https://dotnet.microsoft.com/es-es/',
   },
 ];

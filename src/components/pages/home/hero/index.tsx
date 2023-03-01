@@ -55,7 +55,7 @@ export const Hero = () => {
         {/* Buttons */}
         <Stack direction={['column', 'row']}>
           <Link
-            href='https://drive.google.com/file/d/1nhnuUvuRol0uiUASYbJ_bFue9HD_3Os_/view?usp=share_link'
+            href='https://drive.google.com/file/d/1hTyro4DaE0aK0qjpg1S_N9B5EI7BXaVT/view?usp=share_link'
             target='_blank'
           >
             <Button

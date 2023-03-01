@@ -11,12 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { StackCard } from './StackCard';
-import {
-  backTechStack,
-  frontTechStack,
-  othersTechStack,
-  toolsTechStack,
-} from './tech-stacks';
+import { backTechStack, frontTechStack, toolsTechStack } from './tech-stacks';
 
 export const StackList = () => {
   const TabPanelNode = (techStack: ITech[]) => (
@@ -53,14 +48,12 @@ export const StackList = () => {
         <TabList flexDirection={['column', 'column', 'row']}>
           <Tab mx={2}>Frontend</Tab>
           <Tab mx={2}>Backend</Tab>
-          <Tab mx={2}>Otras</Tab>
           <Tab mx={2}>Herramientas</Tab>
         </TabList>
 
         <TabPanels>
           {TabPanelNode(frontTechStack)}
           {TabPanelNode(backTechStack)}
-          {TabPanelNode(othersTechStack)}
           {TabPanelNode(toolsTechStack)}
         </TabPanels>
       </Tabs>

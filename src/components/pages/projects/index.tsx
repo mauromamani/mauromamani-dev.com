@@ -93,7 +93,7 @@ export const Page = () => {
           Proyectos
         </Heading>
         <Text as='p' mt='3' color='gray.400'>
-          Lista de proyectos personales código abierto disponibles en Github
+          Lista de proyectos de código abierto disponibles en Github
         </Text>
       </Box>
 
