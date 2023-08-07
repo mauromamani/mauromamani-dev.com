@@ -55,6 +55,20 @@ const mainProjects: IMainProject[] = [
     badges: ['.NET', 'C#', 'WPF'],
     github: 'https://github.com/mauromamani/gestion-muebleria',
   },
+  {
+    title: 'Next E-commerce',
+    description: 'E-commerce construido con Next.js, GraphQL, PostgreSQL',
+    image: '/next-ecommerce.webp',
+    badges: ['NextJS', 'React', 'GraphQL', 'PostgreSQL'],
+    github: 'https://github.com/mauromamani/next-ecommerce',
+  },
+  {
+    title: 'Next Blog',
+    description: 'Blog para subir artículos em formato markdown',
+    image: '/next-blog.webp',
+    badges: ['NextJS', 'React', 'MongoDB'],
+    github: 'https://github.com/mauromamani/next-blog',
+  },
 ];
 
 const secondaryProjects: ISecondaryProject[] = [
@@ -63,12 +77,6 @@ const secondaryProjects: ISecondaryProject[] = [
     description:
       'Aplicación de escritorio que permite transformar markdown a un texto formateado, ideal para escribir un archivo README de manera eficaz',
     github: 'https://github.com/mauromamani/markdown-editor',
-  },
-  {
-    title: 'Next Blog',
-    description:
-      'Blog personal con el cual se pueden subir artículos en formato Markdown, desplegado en Vercel',
-    github: 'https://github.com/mauromamani/next-blog',
   },
   {
     title: 'Portafolio Personal',
