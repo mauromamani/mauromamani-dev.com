@@ -12,6 +12,8 @@ import {
   SiDotnet,
   SiBootstrap,
   SiElectron,
+  SiKubernetes,
+  SiCodeigniter,
 } from 'react-icons/si';
 import { FaReact, FaGitAlt, FaVuejs } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -57,6 +59,11 @@ export const backTechStack: ITech[] = [
     url: 'https://dotnet.microsoft.com/es-es/',
   },
   {
+    name: 'CodeIgniter',
+    icon: <SiCodeigniter fontSize='20px' />,
+    url: 'https://codeigniter.com/',
+  },
+  {
     name: 'MongoDB',
     icon: <SiMongodb fontSize='20px' />,
     url: 'https://www.mongodb.com/es',
@@ -70,6 +77,11 @@ export const backTechStack: ITech[] = [
 
 export const toolsTechStack: ITech[] = [
   {
+    name: 'Linux',
+    icon: <SiLinux fontSize='20px' />,
+    url: 'https://www.linux.org/',
+  },
+  {
     name: 'Git & Github',
     icon: <FaGitAlt fontSize='20px' />,
     url: 'https://www.github.com/',
@@ -80,9 +92,9 @@ export const toolsTechStack: ITech[] = [
     url: 'https://www.docker.com/',
   },
   {
-    name: 'Linux',
-    icon: <SiLinux fontSize='20px' />,
-    url: 'https://www.linux.org/',
+    name: 'Kubernetes',
+    icon: <SiKubernetes fontSize='20px' />,
+    url: 'https://kubernetes.io/',
   },
 ];
 
