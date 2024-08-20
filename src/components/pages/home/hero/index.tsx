@@ -51,23 +51,6 @@ export const Hero = () => {
             de aplicaciones.
           </Heading>
         </Box>
-
-        {/* Buttons */}
-        <Stack direction={['column', 'row']}>
-          <Link
-            href='https://drive.google.com/file/d/1DHr6Baf_mz1peUqZqfLnqDUoHEGpQWqp/view?usp=sharing'
-            target='_blank'
-          >
-            <Button
-              variant='solid'
-              colorScheme='orange'
-              rounded='md'
-              leftIcon={<CgAlbum size='20px' />}
-            >
-              Currículum
-            </Button>
-          </Link>
-        </Stack>
       </VStack>
     </Box>
   );
